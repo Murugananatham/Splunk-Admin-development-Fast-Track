@@ -715,12 +715,12 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="tel:+91 9750962781" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  <Link href="tel:+91 8317349618" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                     Phone: +91 8317349618
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://wa.me/9750962781" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  <Link href="https://wa.me/918317349618" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                     WhatsApp: +91 8317349618
                   </Link>
                 </li>
