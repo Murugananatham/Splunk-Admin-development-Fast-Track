@@ -12,7 +12,9 @@ export default function Home() {
        {/* Header */}
       <header className="sticky top-0 z-50 w-full bg-transparent">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <span className="text-xl font-bold text-green-700">SoftMania</span>
+        <a href="#">
+          <span className="text-xl font-bold text-green-700">Soft Mania</span>
+          </a>
           <a href="#contact">
             <Btn03/>
           </a>
