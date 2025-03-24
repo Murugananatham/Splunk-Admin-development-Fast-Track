@@ -1,24 +1,23 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Download, MessageSquare, CheckCircle, Calendar, Clock, Users, Video, Rocket, CreditCard } from "lucide-react"
-import Image from "next/image"
+import { Download, MessageSquare, CheckCircle, Calendar, Clock, Users, Video, Rocket, CreditCard, DollarSign, LayoutList } from "lucide-react"
 import Link from "next/link"
-import RoadmapChart from "@/components/roadmap-chart"
-import { ContactForm } from "@/components/contact-form"
-
+import Btn03 from "../components/btn-03"
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
-        {/* Header */}
-        <header className="sticky top-0 z-50 w-full bg-transparent">
-          <div className="container mx-auto flex h-16 items-center">
-            <span className="text-xl font-bold text-green-700">SoftMania</span>
-          </div>
-        </header>
+       {/* Header */}
+      <header className="sticky top-0 z-50 w-full bg-transparent">
+        <div className="container mx-auto flex h-16 items-center justify-between px-4">
+          <span className="text-xl font-bold text-green-700">SoftMania</span>
+          <a href="#contact">
+            <Btn03/>
+          </a>
+        </div>
+      </header>
 
 
       <main className="flex-1">    
@@ -28,7 +27,7 @@ export default function Home() {
 
             <div className="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-md">
               <Rocket className="h-4 w-4 text-green-700 mr-2" />
-              <span className="text-sm font-medium text-gray-900">Batch starts from April 7</span>
+              <span className="text-md font-medium text-yellow-700">Batch starts from April 7</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mt-10 mb-14">
@@ -55,67 +54,48 @@ export default function Home() {
 
         {/* Course Details */}
         <section id="course-details" className="py-16 bg-gray-50">
-          <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12">Course Details</h2>
-            <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
-              <Table>
-                <TableBody>
-                  <TableRow>
-                    <TableCell className="font-medium bg-gray-50 w-1/3">Duration</TableCell>
-                    <TableCell>3 Months</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium bg-gray-50">Total Hours</TableCell>
-                    <TableCell>45 Hours</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium bg-gray-50">Batch Size</TableCell>
-                    <TableCell>5 Members per batch</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium bg-gray-50">Sessions</TableCell>
-                    <TableCell>1-hour session every alternate day</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium bg-gray-50">Mode</TableCell>
-                    <TableCell>Online</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium bg-gray-50">Batch Timings</TableCell>
-                    <TableCell>8:30 AM, 1:00 PM, 8:30 PM IST</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium bg-gray-50">Course Fee</TableCell>
-                    <TableCell className="font-bold">Rs. 45,000/- per person</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </div>
-
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <Card className="p-6 text-center flex flex-col items-center">
-                <Clock className="h-10 w-10 text-green-700 mb-4" />
-                <h3 className="font-bold mb-2">45 Hours</h3>
-                <p className="text-sm text-gray-500">Total Training</p>
-              </Card>
-              <Card className="p-6 text-center flex flex-col items-center">
-                <Calendar className="h-10 w-10 text-green-700 mb-4" />
-                <h3 className="font-bold mb-2">3 Months</h3>
-                <p className="text-sm text-gray-500">Course Duration</p>
-              </Card>
-              <Card className="p-6 text-center flex flex-col items-center">
-                <Users className="h-10 w-10 text-green-700 mb-4" />
-                <h3 className="font-bold mb-2">5 Members</h3>
-                <p className="text-sm text-gray-500">Per Batch</p>
-              </Card>
-              <Card className="p-6 text-center flex flex-col items-center">
-                <Video className="h-10 w-10 text-green-700 mb-4" />
-                <h3 className="font-bold mb-2">Online</h3>
-                <p className="text-sm text-gray-500">Live Sessions</p>
-              </Card>
-            </div>
-          </div>
-        </section>
+      <div className="container">
+        <h2 className="text-3xl font-bold text-center mb-12">Course Details</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <Card className="p-6 text-center flex flex-col items-center">
+            <Clock className="h-10 w-10 text-green-700 mb-4" />
+            <h3 className="font-bold mb-2">45 Hours</h3>
+            <p className="text-sm text-gray-500">Total Training</p>
+          </Card>
+          <Card className="p-6 text-center flex flex-col items-center">
+            <Calendar className="h-10 w-10 text-green-700 mb-4" />
+            <h3 className="font-bold mb-2">3 Months</h3>
+            <p className="text-sm text-gray-500">Course Duration</p>
+          </Card>
+          <Card className="p-6 text-center flex flex-col items-center">
+            <Users className="h-10 w-10 text-green-700 mb-4" />
+            <h3 className="font-bold mb-2">5 Members</h3>
+            <p className="text-sm text-gray-500">Per Batch</p>
+          </Card>
+          <Card className="p-6 text-center flex flex-col items-center">
+            <Video className="h-10 w-10 text-green-700 mb-4" />
+            <h3 className="font-bold mb-2">Online</h3>
+            <p className="text-sm text-gray-500">Live Sessions</p>
+          </Card>
+          <Card className="p-6 text-center flex flex-col items-center">
+            <LayoutList className="h-10 w-10 text-green-700 mb-4" />
+            <h3 className="font-bold mb-2">1 Hour</h3>
+            <p className="text-sm text-gray-500">Every Alternate Day</p>
+          </Card>
+          <Card className="p-6 text-center flex flex-col items-center">
+            <Clock className="h-10 w-10 text-green-700 mb-4" />
+            <h3 className="font-bold mb-2">Batch Timings</h3>
+            <p className="text-sm text-gray-500">8:30-9:30 AM, 1:00-2:00 PM, 8:30-9:30 PM IST</p>
+          </Card>
+          <Card className="p-6 text-center flex flex-col items-center">
+            <DollarSign className="h-10 w-10 text-green-700 mb-4" />
+            <h3 className="font-bold mb-2">Rs. 45,000/-</h3>
+            <p className="text-sm text-gray-500">Per Person</p>
+          </Card>
+        </div>
+      </div>
+    </section>
 
         {/* Detailed Syllabus */}
         <section id="syllabus" className="py-16 bg-white">
@@ -289,7 +269,6 @@ export default function Home() {
                     </AccordionItem>
                   </Accordion>
                 </TabsContent>
-
               </Tabs>
 
             </div>
@@ -366,69 +345,74 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Learning Roadmap */}
-        <section id="roadmap" className="py-16 bg-white">
+        {/* Contact & Enrollment */}
+        <section id="contact" className="py-16 bg-white">
           <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12">Learning Roadmap</h2>
-            <div className="max-w-5xl mx-auto">
-              <RoadmapChart />
+            <h2 className="text-3xl font-bold text-center mb-12">Enrollment Process</h2>
+            <div className="gap-4 max-w-2xl mx-auto">
 
-              <div className="mt-12 grid md:grid-cols-2 gap-8">
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-bold mb-4 text-green-700">Splunk Admin (20 hrs)</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-700 mr-2 shrink-0 mt-0.5" />
-                      <span>Requirement gathering</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-700 mr-2 shrink-0 mt-0.5" />
-                      <span>Capacity Planning</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-700 mr-2 shrink-0 mt-0.5" />
-                      <span>Architecture Planning</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-700 mr-2 shrink-0 mt-0.5" />
-                      <span>Setup a Splunk Clustered environment</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-700 mr-2 shrink-0 mt-0.5" />
-                      <span>Deploy Apps to Clustered environment</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-700 mr-2 shrink-0 mt-0.5" />
-                      <span>Onboard the data to Splunk Clustered environment</span>
-                    </li>
-                  </ul>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-700 font-bold shrink-0">
+                    1
+                  </div>
+                  <div>
+                    <h4 className="font-medium mb-1">Complete Registration</h4>
+                    <p className="text-gray-600 text-sm">
+                      Fill out the enrollment form and select your preferred batch timing
+                    </p>
+                  </div>
                 </div>
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-bold mb-4 text-green-700">Splunk Developer (20 hrs)</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-700 mr-2 shrink-0 mt-0.5" />
-                      <span>Field Extraction from data </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-700 mr-2 shrink-0 mt-0.5" />
-                      <span>CIM Mapping</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-700 mr-2 shrink-0 mt-0.5" />
-                      <span>Dashboard development</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-700 mr-2 shrink-0 mt-0.5" />
-                      <span>Reports & Alerts creation</span>
-                    </li>
-                  </ul>
+                <div className="flex items-start gap-4">
+                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-700 font-bold shrink-0">
+                    2
+                  </div>
+                  <div>
+                    <h4 className="font-medium mb-1">Make Payment</h4>
+                    <p className="text-gray-600 text-sm">
+                      Secure payment options available including UPI, credit card, and bank transfer
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-700 font-bold shrink-0">
+                    3
+                  </div>
+                  <div>
+                    <h4 className="font-medium mb-1">Start onboarding...</h4>
+                    <p className="text-gray-600 text-sm">
+                      Connect with instructors and get your initial questions answered
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div className="mt-8 p-6 bg-green-100 rounded-lg shadow-sm border border-gray-100">
+                <h4 className="font-bold mb-4 text-green-700">Ready to Enroll?</h4>
+                <p className="text-gray-600 mb-6">
+                  Join our WhatsApp group for quick enrollment and get answers to all your questions from our expert
+                  instructors.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a href="https://chat.whatsapp.com/I5MJEOAfg8z4gquQnHRHUj" target="_blank" rel="noopener noreferrer">
+                    <Button className="bg-green-600 hover:bg-green-800 rounded-full">
+                      <MessageSquare className="mr-2 h-4 w-4" />
+                      WhatsApp Group
+                    </Button>
+                  </a>
+                  <a href="https://www.softmania.in/splunk-training/index" target="_blank" rel="noopener noreferrer">
+                    <Button className="bg-green-700 hover:bg-green-800 rounded-full">
+                      <CreditCard className="mr-2 h-4 w-4" />
+                      Payment Link
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </section>
-
+      </main>
 
         {/* FAQ Section */}
         <section id="faq" className="py-16 bg-gray-50">
@@ -601,75 +585,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Contact & Enrollment */}
-        <section id="contact" className="py-16 bg-white">
-          <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12">Enrollment Process</h2>
-            <div className="gap-4 max-w-2xl mx-auto">
-
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-700 font-bold shrink-0">
-                    1
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-1">Join the WhatsApp Group</h4>
-                    <p className="text-gray-600 text-sm">
-                      Connect with instructors and get your initial questions answered
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-700 font-bold shrink-0">
-                    2
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-1">Complete Registration</h4>
-                    <p className="text-gray-600 text-sm">
-                      Fill out the enrollment form and select your preferred batch timing
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-700 font-bold shrink-0">
-                    3
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-1">Make Payment</h4>
-                    <p className="text-gray-600 text-sm">
-                      Secure payment options available including UPI, credit card, and bank transfer
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-
-              <div className="mt-8 p-6 bg-green-100 rounded-lg shadow-sm border border-gray-100">
-                <h4 className="font-bold mb-4 text-green-700">Ready to Enroll?</h4>
-                <p className="text-gray-600 mb-6">
-                  Join our WhatsApp group for quick enrollment and get answers to all your questions from our expert
-                  instructors.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a href="https://chat.whatsapp.com/I5MJEOAfg8z4gquQnHRHUj" target="_blank" rel="noopener noreferrer">
-                    <Button className="bg-green-600 hover:bg-green-800 rounded-full">
-                      <MessageSquare className="mr-2 h-4 w-4" />
-                      WhatsApp Group
-                    </Button>
-                  </a>
-                  <a href="https://www.softmania.in/splunk-training/index" target="_blank" rel="noopener noreferrer">
-                    <Button className="bg-green-700 hover:bg-green-800 rounded-full">
-                      <CreditCard className="mr-2 h-4 w-4" />
-                      Payment Link
-                    </Button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-12">
