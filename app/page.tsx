@@ -88,7 +88,7 @@ export default function Home() {
           <Card className="p-6 text-center flex flex-col items-center">
             <Clock className="h-10 w-10 text-green-700 mb-4" />
             <h3 className="font-bold mb-2">Batch Timings</h3>
-            <p className="text-sm text-gray-500">8:30-9:30 AM, 1:00-2:00 PM, 8:30-9:30 PM IST</p>
+            <p className="text-sm text-gray-500">8:30-9:30 AM <br></br> 1:00-2:00 PM <br></br> 8:30-9:30 PM IST</p>
           </Card>
           <Card className="p-6 text-center flex flex-col items-center">
             <DollarSign className="h-10 w-10 text-green-700 mb-4" />
