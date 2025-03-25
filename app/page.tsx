@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Download, MessageSquare, CheckCircle, Calendar, Clock, Users, Video, Rocket, CreditCard, DollarSign, LayoutList } from "lucide-react"
+import { Download, MessageSquare, CheckCircle, Calendar, Clock, Users, Video, Rocket, CreditCard, DollarSign, LayoutList, Hourglass, HandCoins ,CalendarCheck, VideoOff, ClipboardList, } from "lucide-react"
 import Link from "next/link"
 import Btn03 from "../components/btn-03"
 import Salesiq from "@/components/salesiq"
@@ -62,7 +62,7 @@ export default function Home() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           <Card className="p-6 text-center flex flex-col items-center">
-            <Clock className="h-10 w-10 text-green-700 mb-4" />
+            <Hourglass className="h-10 w-10 text-green-700 mb-4" />
             <h3 className="font-bold mb-2">45 Hours</h3>
             <p className="text-sm text-gray-500">Total Training</p>
           </Card>
@@ -89,10 +89,14 @@ export default function Home() {
           <Card className="p-6 text-center flex flex-col items-center">
             <Clock className="h-10 w-10 text-green-700 mb-4" />
             <h3 className="font-bold mb-2">Batch Timings</h3>
-            <p className="text-sm text-gray-500">8:30-9:30 AM <br></br> 1:00-2:00 PM <br></br> 8:30-9:30 PM IST</p>
+            <p className="text-sm text-gray-500 text-center md:text-left md:pl-10 md:w-full">
+              8:30-9:30 AM IST <br />
+              1:00-2:00 PM IST <br />
+              8:30-9:30 PM IST
+            </p>
           </Card>
           <Card className="p-6 text-center flex flex-col items-center">
-            <DollarSign className="h-10 w-10 text-green-700 mb-4" />
+            <HandCoins className="h-10 w-10 text-green-700 mb-4" />
             <h3 className="font-bold mb-2">Rs. 45,000/-</h3>
             <p className="text-sm text-gray-500">Per Person</p>
           </Card>
@@ -690,7 +694,6 @@ export default function Home() {
         </div>
       </footer>
       <div>
-
       <Salesiq />
     </div>
     </div>
