@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Download, MessageSquare, CheckCircle, Calendar, Clock, Users, Video, Rocket, CreditCard, DollarSign, LayoutList } from "lucide-react"
 import Link from "next/link"
 import Btn03 from "../components/btn-03"
+import Salesiq from "@/components/salesiq"
 
 export default function Home() {
   return (
@@ -688,7 +689,15 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <div>
+
+      <Salesiq />
     </div>
+    </div>
+
+
+    
   )
+
 }
 
