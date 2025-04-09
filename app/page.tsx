@@ -30,7 +30,7 @@ export default function Home() {
 
             <div className="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-md">
               <Rocket className="h-4 w-4 text-green-700 mr-2" />
-              <span className="text-md font-medium text-yellow-700">Batch starts from April 7</span>
+              <span className="text-md font-medium text-yellow-700">Batch starts from April 14</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mt-10 mb-14">
@@ -446,7 +446,7 @@ export default function Home() {
                   <AccordionTrigger>When is the batch starting?</AccordionTrigger>
                   <AccordionContent>
                     <p className="text-gray-600">
-                      It starts from April 7
+                      It starts from April 14
                     </p>
                   </AccordionContent>
                 </AccordionItem>
